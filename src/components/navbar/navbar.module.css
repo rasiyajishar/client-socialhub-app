@@ -1,0 +1,71 @@
+.container{
+ height:60px;
+ width: 100%;   
+}
+.container1{
+    height: 100%;
+    width: 100%;
+    padding:0.25rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.left{
+   text-decoration:none;
+   color: white;
+   font-size: 28px;
+   letter-spacing: 1px;
+}
+.searchform{
+    display: flex;
+    align-items: center;
+    border:1px solid #333;
+    border-radius: 20px;
+    padding: .5rem;
+    background-color: #fff;
+
+}
+.searchform > input{
+border: none;
+outline: none;
+padding-left: 1.5rem;
+}
+.searchicon{
+font-size: 20px;
+}
+.right{
+    display:flex;
+    align-items: center;
+    gap:1.25rem;
+}
+.personimage{
+    height:45px;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    
+}
+.modal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 75px;
+    top:3rem;
+    right:0.25rem;
+  
+    height: 75px;
+    width:max-content;
+    gap:1rem;
+  padding: 1rem;
+    text-decoration:none;
+  box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.085)
+}
+.Updateprofile{
+    text-decoration: none;
+    color: inherit;
+}
+.logout{
+    cursor: pointer;
+}
