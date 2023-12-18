@@ -1,0 +1,31 @@
+.container{
+    height:calc(100vh-60px);
+    width:100%;
+   
+   
+}
+container1{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    gap:2.25rem;
+    padding-left:3rem;
+top:15rem;
+    
+}
+.items{
+cursor: pointer;
+font-size: 18px;
+text-decoration: none;
+display:flex;
+align-items: center;
+gap:1rem;
+top:3rem;
+right:0.25rem;
+
+}
+item:hover{
+    scale:1.03;
+    color:blue;
+}
