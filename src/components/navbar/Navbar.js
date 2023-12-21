@@ -11,6 +11,7 @@ const Navbar = () => {
         setShowmodal(prev => !prev)
     }
 
+    // handle Logout 
 const handlelogout =()=>{
     localStorage.clear()
     navigate("/auth")
