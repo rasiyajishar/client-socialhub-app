@@ -9,11 +9,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #070606;
 }
 .left{
    text-decoration:none;
-   color: white;
+   color:whitesmoke;
    font-size: 28px;
    letter-spacing: 1px;
 }

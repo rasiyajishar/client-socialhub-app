@@ -1,9 +1,19 @@
 .container{
     height:calc(100vh-60px);
     width:100%;
-   
+  
+}
+.container1{
+    height: 100%;
+    width: 100%;
+    /* padding:0.25rem 1.25rem; */
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
    
 }
+
+
 container1{
     width:100%;
     height:100%;
@@ -12,8 +22,9 @@ container1{
     gap:2.25rem;
     padding-left:3rem;
 top:15rem;
-    
+   
 }
+
 .items{
 cursor: pointer;
 font-size: 18px;
@@ -23,9 +34,9 @@ align-items: center;
 gap:1rem;
 top:3rem;
 right:0.25rem;
-
+color: blue;
 }
-item:hover{
+items:hover{
     scale:1.03;
-    color:blue;
+    color:rgb(15, 15, 15);
 }
