@@ -20,7 +20,7 @@ const handlelogout =()=>{
   return (
     <div className={classes.container}>
         <div className={classes.container1}>
-            <div className={classes.left}>SocialHub</div>
+            <div className={classes.left}>socialhuB</div>
             <div className={classes.right}>
               <form className={classes.searchform}>
             <input type='text' placeholder='search profile..'/>

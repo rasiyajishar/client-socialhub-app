@@ -36,7 +36,8 @@ const Auth = () => {
       console.log(data.data);
       } else {
         if (email === "" || password === "") {
-          setError("fill all fields");
+          // setError("fill all fields");
+          alert("fill all fields")
           return;
         }
         const body = {email,password}
@@ -53,14 +54,14 @@ const Auth = () => {
     <div className={classes.container}>
       <div className={classes.container1}>
         <div className={classes.left}>
-          <h3>socialhub</h3>
-          <img className={classes.img} src={bg} alt='img not found' />
+          <h3>Socialhub</h3>
+          {/* <img className={classes.img} src={bg} alt='img not found' /> */}
         </div>
         <form onSubmit={handleSubmit} className={classes.right}>
           {isregister && <input type="text" placeholder='Type your username..' onChange={(e) => setUsername(e.target.value)} />}
           <input  type='email' placeholder='Type your email' onChange={(e) => setEmail(e.target.value)} />
           <input type='password' placeholder='Type your password......' onChange={(e) => setPassword(e.target.value)} />
-          <button className='submitbtn'>
+          <button className={classes.submitbtn}>
             {isregister ? "Register" : "Login"}
           </button>
           {isregister ?

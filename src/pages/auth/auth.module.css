@@ -15,12 +15,39 @@
 
 }
 .left > h3{
-    color: rgb(42, 81, 165);
-    font-size: 30px;
+    color: rgb(19, 49, 112);
+    font-size: 50px;
     margin-top:1.25rem;
     letter-spacing:.2rem;
     font-style:oblique;
    margin-left: 50px;
-    
-    
+   font-weight:bold;
+       
+}
+
+.right{
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+
+}
+.right >input {
+   outline:none;
+   border:none;
+   border-bottom:1px solid #888;
+   padding:.25rem;
+}
+ .right > .submitbtn{
+    background-color:#69a2c9;
+    color: white;
+    outline:none;
+    border : 1px solid transparent;
+    font-size: 18px;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+.right > .submitbtn:hover{
+    background-color:#fff ;
+    color:blue;
+    border:blue;
 }

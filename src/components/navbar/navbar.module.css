@@ -9,13 +9,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #070606;
+    background-color: #8bbee0;
 }
 .left{
    text-decoration:none;
    color:whitesmoke;
    font-size: 28px;
-   letter-spacing: 1px;
+   letter-spacing: 4px;
+   font-weight: bold;
+   font-style:italic;
 }
 .searchform{
     display: flex;
@@ -44,8 +46,7 @@ font-size: 20px;
     width: 45px;
     border-radius: 50%;
     cursor: pointer;
-    
-    
+     
 }
 .modal{
     position: absolute;
