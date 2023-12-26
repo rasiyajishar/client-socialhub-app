@@ -13,7 +13,7 @@ import axios from "axios";
 const token = localStorage.getItem("jwt_token")
 
 
-axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
+
 export const Axios = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
   headers: {
@@ -21,6 +21,8 @@ export const Axios = axios.create({
     Authorization: `Bearer ${token}`,
   },
 });
+
+
 
 
 
