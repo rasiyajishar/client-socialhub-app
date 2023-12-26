@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import classes from './navbar.module.css'
-
+import profile from '../../Images/profile.jpg'
 import { FaSearch } from "react-icons/fa";
 import { useNavigate,Link } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ const handlelogout =()=>{
             <input type='text' placeholder='search profile..'/>
             <FaSearch className={classes.searchicon}/>
             </form>  
-         <img src='client\src\utils\profile.jpg' alt='img not found' className={classes.personimage} onClick={togglemodal} />
+         <img src={profile} alt='img not found' className={classes.personimage} onClick={togglemodal} />
           {showmodal && ( 
           <div className={classes.modal}> 
            <span onClick={handlelogout} className={classes.logout}>logout</span>

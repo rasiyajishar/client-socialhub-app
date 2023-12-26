@@ -15,8 +15,8 @@
 
 }
 .left > h3{
-    color: rgb(19, 49, 112);
-    font-size: 50px;
+    color: rgb(94, 6, 42);
+    font-size: 30px;
     margin-top:1.25rem;
     letter-spacing:.2rem;
     font-style:oblique;
@@ -38,7 +38,7 @@
    padding:.25rem;
 }
  .right > .submitbtn{
-    background-color:#69a2c9;
+    background-color:#042033;
     color: white;
     outline:none;
     border : 1px solid transparent;
@@ -48,6 +48,6 @@
 }
 .right > .submitbtn:hover{
     background-color:#fff ;
-    color:blue;
-    border:blue;
+    color:#042033;
+    border:#042033;
 }

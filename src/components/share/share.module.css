@@ -1,0 +1,162 @@
+.share {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sharetop {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sharetop img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  .sharetop input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .sharetop button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .shareBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .photocontainer {
+    position: relative;
+    margin-top: 16px;
+  }
+  
+  .closeIcon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+  }
+  
+  .photocontainer img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+  
+   /* .share {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 2px 1px 8px 4px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 2px 1px 8px 4px rgba(0, 0, 0, 0.075);
+    box-shadow: 2px 1px 8px 4px rgba(0, 0, 0, 0.075);
+}
+
+.shareTop>img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.shareTop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    border-bottom: 1px solid #999;
+    padding: 1rem 0.75rem;
+}
+
+.shareTop>input {
+    flex: 1;
+    border: none;
+    outline: none;
+    border: 1px solid #777;
+    padding: 0.5rem;
+    border-radius: 16px;
+}
+
+.shareTop>button {
+    padding: 0.5rem 1.25rem;
+    background-color: #1515ea;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.shareBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.75rem;
+}
+
+.shareBottom>.item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #222;
+    cursor: pointer;
+}
+
+.photoContainer{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.closeIcon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 999;
+} */
