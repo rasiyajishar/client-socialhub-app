@@ -6,21 +6,6 @@ import Updateprofile from './pages/updateProfile/UpdateProfile';
 import ProfileDetails from './pages/profileDetails/ProfileDetails';
 import Auth from './pages/auth/Auth';
 
-import axios from "axios";
-
-
-
-
-
-const token = localStorage.getItem("jwt_token");
-
-export const Axios = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
-  },
-});
 
 
 

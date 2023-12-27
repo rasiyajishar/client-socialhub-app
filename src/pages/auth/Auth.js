@@ -191,7 +191,7 @@ const Auth = () => {
   const handleLogin = async () => {
     
     try {
-      const response = await axios.post('/auth/login', {
+      const response = await axios.post('http://localhost:4000/auth/login', {
         email,
         password,
       });
@@ -199,7 +199,9 @@ const Auth = () => {
       console.log('Login successful:', response.data);
 
       // Handle successful login
-      localStorage.setItem('jwt_token', response.data.token);
+      const data=response.data
+      const userToken=data.token
+      localStorage.setItem('jwt_token',userToken );
       navigate('/');
     } catch (error) {
       console.error('Error during login:', error);
