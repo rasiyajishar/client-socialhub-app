@@ -155,7 +155,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classes from './auth.module.css';
-import axios from 'axios';
+import axios from 'axios'
+
+
 
 const Auth = () => {
   const [isRegister, setIsRegister] = useState(false);
@@ -166,7 +168,8 @@ const Auth = () => {
 
   const handleRegistration = async (values) => {
     try {
-      await axios.post('http://localhost:8080/auth/register', {
+      await axios
+      .post('http://localhost:4000/auth/register', {
         username: values.username,
         email: values.email,
         password: values.password,
@@ -174,13 +177,21 @@ const Auth = () => {
       alert('Registration success');
       navigate('/');
     } catch (err) {
-      console.error('Registration failed', err);
+      if (err.response && err.response.data) {
+        console.error('Registration failed', err.response.data);
+      } else {
+        console.error('Registration failed', err.message);
+      }
     }
   };
+  
+  
+  
 
   const handleLogin = async () => {
+    
     try {
-      const response = await axios.post('http://localhost:8080/auth/login', {
+      const response = await axios.post('/auth/login', {
         email,
         password,
       });

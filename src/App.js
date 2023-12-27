@@ -10,9 +10,9 @@ import axios from "axios";
 
 
 
-const token = localStorage.getItem("jwt_token")
 
 
+const token = localStorage.getItem("jwt_token");
 
 export const Axios = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,

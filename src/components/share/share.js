@@ -32,19 +32,19 @@ const Share = () => {
             imageUrl: filename,
           };
   
-          // Assuming your server endpoint for creating a post is '/createPost'
+          
           const createPostResponse = await axios.post('/createPost', body);
   
-          // Handle the response from creating a post (e.g., show a success message)
+          
           console.log(createPostResponse.data);
         }
       } else {
-        // Handle case where no photo is selected
+       
         return;
       }
     } catch (error) {
       console.error(error);
-      // Handle errors (e.g., show an error message to the user)
+     
     }
   };
   
@@ -69,7 +69,7 @@ id="photo" onChange={(e)=>setPhoto(e.target.files[0])} />    </div>
    {photo && (
     <div className={classes.photocontainer}>
       <AiOutlineClose className={classes.closeIcon} onClick={()=>setPhoto("")} />
-      <img src ={URL.createObjectURL(photo)} className={classes.photo}/>
+      <img src ={URL.createObjectURL(photo)} alt='imagefile' className={classes.photo}/>
     </div>
    )}
    
