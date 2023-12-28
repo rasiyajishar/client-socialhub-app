@@ -37,61 +37,61 @@ const Post = ({ post, user }) => {
     };
     fetchDetails();
   }, [post.userId]);
+  
 
-
-  useEffect(() => {
-    const fetchComments = async () => {
-      try {
-        const response = await Axios.get(`/comment/${post._id}`);
-        setComments(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchComments();
-  }, [post._id]);
+  // useEffect(() => {
+  //   const fetchComments = async () => {
+  //     try {
+  //       const response = await Axios.get(`/comment/${post._id}`);
+  //       setComments(response.data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   fetchComments();
+  // }, [post._id]);
 
 
 
 
   const handleComment = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await Axios.post('/comment', { text: commentText, postId: post._id });
-      setComments((prev) => [response.data, ...prev]);
-      setCommentText("");
-    } catch (error) {
-      console.error(error);
-    }
+    // e.preventDefault();
+    // try {
+    //   const response = await Axios.post('/comment', { text: commentText, postId: post._id });
+    //   setComments((prev) => [response.data, ...prev]);
+    //   setCommentText("");
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
 
 
   const handleDeletePost = async () => {
-    try {
-      await Axios.delete(`/post/deletePost/${post._id}`);
-      window.location.reload();
-    } catch (error) {
-      console.error(error);
-    }
+    // try {
+    //   await Axios.delete(`/post/deletePost/${post._id}`);
+    //   window.location.reload();
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
   const handleLike = async () => {
-    try {
-      await Axios.put(`/post/likePost/${post._id}`);
-      setIsLiked((prev) => !prev);
-    } catch (error) {
-      console.error(error);
-    }
+    // try {
+    //   await Axios.put(`/post/likePost/${post._id}`);
+    //   setIsLiked((prev) => !prev);
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
   const handleDislike = async () => {
-    try {
-      await Axios.put(`/post/dislikePost/${post?._id}`);
-      setIsLiked((prev) => !prev);
-    } catch (error) {
-      console.error(error);
-    }
+    // try {
+    //   await Axios.put(`/post/dislikePost/${post?._id}`);
+    //   setIsLiked((prev) => !prev);
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
   return (
