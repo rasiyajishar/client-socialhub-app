@@ -1,56 +1,43 @@
-import React, { useState } from "react";
-import classes from "./share.module.css";
-import { Axios } from "../../instance/Axios";
+import React, { useState } from 'react';
+import classes from './share.module.css';
+import { Axios } from '../../instance/Axios';
+import { AiFillCamera, AiFillSmile, AiOutlineClose } from 'react-icons/ai';
+import { IoMdPhotos } from 'react-icons/io';
+import profile from '../../Images/profile.jpg';
 
-import { AiFillCamera, AiFillSmile, AiOutlineClose } from "react-icons/ai";
-import { IoMdPhotos } from "react-icons/io";
-import profile from "../../Images/profile.jpg";
-
-// import useSelector from 'react-redux'
 const Share = () => {
-  const [desc, setDesc] = useState("");
-  const [photo, setPhoto] = useState("");
-  console.log("first,", photo);
-  // const{token}=useSelector((state)=>state.auth)
+  const [desc, setDesc] = useState('');
+  const [photo, setPhoto] = useState('');
 
-  const handlecreatepost = async () => {
+  const handleCreatePost = async () => {
     try {
-      const jwt_token = `Bearer ${localStorage.getItem("jwt_token")}`;
-      console.log(jwt_token);
-      let filename = null;
-      console.log("Description:", desc);
-      console.log("Photo:", photo);
+      const jwtToken = `Bearer ${localStorage.getItem('jwt_token')}`;
+      const formData = new FormData();
 
       if (photo) {
-        const formData = new FormData();
-        // filename = crypto.randomUUID() + photo.name;
+        formData.append('photo', photo);
 
-        formData.append("photo", photo);
-        formData.append("imageUrl", filename);
-        
+        const uploadResponse = await Axios.post('/upload', formData, {
+          headers: {
+            Authorization: jwtToken,
+            'Content-Type': 'multipart/form-data',
+          },
+        });
 
-        // const response = await Axios.post("/upload", formData, {
-        //   headers: {
-        //     Authorization: jwt_token,
-        //     "Content-Type": "multipart/form-data",
-        //   },
-        // });
+        // Assuming the image upload was successful, use the returned URL
+        const imageUrl = uploadResponse.data.url;
 
-        // Check if the image upload was successful
-        // if (response.status === 200) {
-          // const body = {
-            
-          //   desc,
-          //   imageUrl: filename,
-          // };
+       const postResponse = await Axios.post('/post/createPost', {
+  desc,
+  imageUrl,
+});
 
-          const response = await Axios.post("/post/createPost", {body:photo});
 
-          console.log(response.data);
-        }
-      // } else {
-      //   return;
-      // }
+        console.log(postResponse.data);
+      } else {
+        // Handle case where no photo is selected
+        console.log('No photo selected');
+      }
     } catch (error) {
       console.error(error);
     }
@@ -65,7 +52,7 @@ const Share = () => {
           placeholder="share your openion"
           onChange={(e) => setDesc(e.target.value)}
         />
-        <button onClick={handlecreatepost}>POST</button>
+        <button onClick={handleCreatePost}>POST</button>
       </div>
       <div className={classes.shareBottom}>
         <div className={classes.item}>

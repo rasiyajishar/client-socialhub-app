@@ -13,11 +13,11 @@ const Posts = () => {
  
 
 
-  useEffect(() => {
+ useEffect(() => {
   const fetchTimelinePosts = async () => {
     try {
       const response = await Axios.get('/post/timelinePosts');
-      console.log(response)
+      console.log(response);
       setPosts(response.data);
     } catch (error) {
       console.error('Error fetching timeline posts:', error);
